@@ -1,11 +1,11 @@
 require('@babel/register')({
   plugins: [
-    'babel-plugin-transform-runtime'
+    '@babel/plugin-transform-runtime'
   ].map(require.resolve),
   presets: [
-    'babel-preset-env',
-    'babel-preset-stage-0',
-    'babel-preset-react'
+    '@babel/preset-env',
+    '@babel/preset-stage-0',
+    '@babel/preset-react'
   ].map(require.resolve)
 })
 
