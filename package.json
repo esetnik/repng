@@ -16,11 +16,11 @@
     "help": "./cli.js --help"
   },
   "dependencies": {
-    "@babel/plugin-transform-runtime": "^7.0.0.beta",
-    "@babel/preset-env": "^7.0.0.beta",
-    "@babel/preset-react": "^7.0.0.beta",
-    "@babel/preset-stage-0": "^7.0.0.beta",
-    "@babel/register": "^7.0.0.beta",
+    "@babel/plugin-transform-runtime": "^7.0.0-beta",
+    "@babel/preset-env": "^7.0.0-beta",
+    "@babel/preset-react": "^7.0.0-beta",
+    "@babel/preset-stage-0": "^7.0.0-beta",
+    "@babel/register": "^7.0.0-beta",
     "datauri": "^1.1.0",
     "meow": "^4.0.0",
     "ora": "^2.0.0",
