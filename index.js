@@ -1,14 +1,3 @@
-require('@babel/register')({
-  plugins: [
-    '@babel/plugin-transform-runtime'
-  ].map(require.resolve),
-  presets: [
-    '@babel/preset-env',
-    ["@babel/preset-stage-0", { "decoratorsLegacy": true }],
-    '@babel/preset-react'
-  ].map(require.resolve)
-})
-
 const fs = require('fs')
 const puppeteer = require('puppeteer')
 const { Readable } = require('stream')
