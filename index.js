@@ -59,7 +59,7 @@ module.exports = async (Component, opts = {}) => {
   // todo:
   // - scale
   // - delay
-  const browser = await puppeteer.launch()
+  const browser = await puppeteer.launch({executablePath: '/usr/bin/chromium-browser', args: ['--no-sandbox', '--headless', '--disable-gpu']})
   const page = await browser.newPage()
   await page.goto(data)
   const result = await page.screenshot({
