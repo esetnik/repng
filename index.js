@@ -1,4 +1,4 @@
-require('babel-register')({
+require('@babel/register')({
   plugins: [
     'babel-plugin-transform-runtime'
   ].map(require.resolve),
