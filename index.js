@@ -6,7 +6,7 @@ const { createElement: h } = require('react')
 const { renderToStaticMarkup } = require('react-dom/server')
 const Datauri = require('datauri')
 
-const baseCSS = `*{box-sizing:border-box}body{margin:0;font-family:system-ui,sans-serif}`
+const baseCSS = `*{box-sizing:border-box}body{margin:0;font-family:system-ui,sans-serif;width: 100%; height: 100%}`
 
 const getHtmlData = ({
   body,
