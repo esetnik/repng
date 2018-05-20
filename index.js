@@ -58,8 +58,10 @@ module.exports = async (Component, opts = {}) => {
   // - scale
   // - delay
   const browser = await puppeteer.launch({
-    executablePath: '/usr/bin/chromium-browser',
+    executablePath: process.env.CHROME_BIN || null,
+    args: ['--no-sandbox', '--headless', '--disable-gpu']
   });
+
   const page = await browser.newPage();
   await page.goto(data);
   const result = await page.screenshot({
@@ -75,7 +77,7 @@ module.exports = async (Component, opts = {}) => {
   await browser.close();
 
   const stream = new Readable();
-  stream._read = () => {};
+  stream._read = () => { };
 
   stream.push(result);
   stream.push(null);
