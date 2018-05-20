@@ -59,7 +59,12 @@ module.exports = async (Component, opts = {}) => {
   // - delay
   const browser = await puppeteer.launch({
     executablePath: process.env.CHROME_BIN || null,
-    args: ['--no-sandbox', '--headless', '--disable-gpu']
+    args: [
+      '--no-sandbox',
+      '--headless',
+      '--disable-gpu',
+      '--disable-dev-shm-usage',
+    ],
   });
 
   const page = await browser.newPage();
@@ -77,7 +82,7 @@ module.exports = async (Component, opts = {}) => {
   await browser.close();
 
   const stream = new Readable();
-  stream._read = () => { };
+  stream._read = () => {};
 
   stream.push(result);
   stream.push(null);
